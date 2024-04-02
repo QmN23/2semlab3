@@ -2,8 +2,8 @@
 
 class String {
 
-    char* str; // Указатель на строку
-    int length; // Длина строки
+    char* str; 
+    int length; 
 
 public:
     // Конструктор по умолчанию
@@ -49,13 +49,12 @@ public:
         delete[] str; 
     }
 
-    // Метод для получения строки
+    // Геттер
     const char* getString() const {
         return str;
     }
 };
 
-// Функция main для демонстрации использования класса
 int main() {
     String str1("Hello, world!"); // Создаем объект и передаем ему строку
     String str2 = str1; // Создаем второй объект, используя конструктор копирования
@@ -63,7 +62,6 @@ int main() {
 
     str3 = str1; // Присваиваем третьему объекту значение первого объекта
 
-    // Выводим на экран содержимое всех строк
     std::cout << "String 1: " << str1.getString() << std::endl;
     std::cout << "String 2: " << str2.getString() << std::endl;
     std::cout << "String 3: " << str3.getString() << std::endl;
